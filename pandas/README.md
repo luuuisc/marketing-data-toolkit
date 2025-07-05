@@ -71,7 +71,7 @@ Estas estructuras permiten operaciones vectorizadas y el patrón split-apply-com
 
 ```python
 import pandas as pd
-```
+
 
 ### 1. Ingesta multicanal
 spend   = pd.read_csv("ad_spend.csv",   parse_dates=["date"])
@@ -99,14 +99,15 @@ weekly = (
 )
 
 weekly.to_parquet("fact_campaign_weekly.parquet")
+```
 
 Genera una tabla de hechos semanal lista para modelos de atribución o dashboards ejecutivos.  ￼
 
-Buenas prácticas de rendimiento
-	1.	Vectoriza operaciones y evita loops en Python.
-	2.	Optimiza tipos: convierte cadenas repetidas a category y enteros dispersos a Int64.  ￼
-	3.	Usa usecols en read_csv para cargar solo las columnas necesarias.  ￼
-	4.	Copy-on-Write (CoW) reduce copias accidentales a partir de la versión 2.3.  ￼
+## Buenas prácticas de rendimiento
+- Vectoriza operaciones y evita loops en Python.
+- Optimiza tipos: convierte cadenas repetidas a category y enteros dispersos a Int64.  ￼
+- Usa usecols en read_csv para cargar solo las columnas necesarias
+- Copy-on-Write (CoW) reduce copias accidentales a partir de la versión 2.3.  ￼
 
 ## Recursos
 
