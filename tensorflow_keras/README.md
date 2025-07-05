@@ -54,7 +54,7 @@ consulta https://www.tensorflow.org/install para ver las versiones compatibles c
 
 ## Ejemplo (clasificación binaria)
 
-```bash
+```python
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
