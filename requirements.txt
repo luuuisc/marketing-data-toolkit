@@ -1,0 +1,32 @@
+# CORE
+python>=3.10
+pandas>=2.0
+numpy>=1.23
+
+# VISUALIZACIÓN
+matplotlib>=3.7
+seaborn>=0.12
+
+# MACHINE LEARNING CLÁSICO
+scikit-learn>=1.3
+
+# DEEP LEARNING
+torch>=2.0
+torchvision>=0.15
+torchaudio>=2.0
+tensorflow>=2.13
+keras>=2.13
+
+# UTILIDADES Y ENTORNOS
+jupyterlab>=4.0
+notebook>=7.0
+ipywidgets>=8.0
+tqdm>=4.65
+
+# GUARDADO Y SERIALIZACIÓN
+joblib>=1.3
+h5py>=3.9
+
+# ARCHIVOS Y FORMATO DE DATOS
+pyarrow>=12.0
+openpyxl>=3.1

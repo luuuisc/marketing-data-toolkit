@@ -1,0 +1,67 @@
+# === Entornos de Python ===
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# === Archivos de configuración de entorno ===
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# === Jupyter Notebooks ===
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# === Salidas de ejecución ===
+*.log
+*.out
+*.bak
+*.tmp
+*.swp
+
+# === Archivos generados por TensorFlow/Keras/PyTorch ===
+checkpoints/
+runs/
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.pb
+*.tflite
+
+# === Datos y modelos grandes ===
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.parquet
+*.feather
+*.zip
+*.tar.gz
+*.pkl
+*.joblib
+*.sav
+*.model
+
+# === Archivos ocultos o de sistema ===
+.DS_Store
+Thumbs.db
+
+# === VSCode / PyCharm / IDEs ===
+.vscode/
+.idea/
+*.code-workspace
+
+# === Entornos y configuración de JupyterLab ===
+.lab/
+.ipython/
+.jupyter/
