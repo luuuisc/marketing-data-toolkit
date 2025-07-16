@@ -1,7 +1,8 @@
 # Matplotlib 3.10 — Guía rápida para visualización de datos
 
 **Matplotlib** es la librería estándar para crear visualizaciones estáticas, animadas e interactivas en Python.  
-Sirve como base de librerías de más alto nivel (Seaborn, Pandas `.plot`, Plotly Express) y es el “lenguaje gráfico” que permite comunicar *insights* con precisión y control pixel-a-pixel.  [oai_citation:0‡matplotlib.org](https://matplotlib.org/stable/index.html?utm_source=chatgpt.com)
+Sirve como base de librerías de más alto nivel (Seaborn, Pandas `.plot`, Plotly Express) y es el “lenguaje gráfico” que permite comunicar *insights* con precisión y control pixel-a-pixel.  
+Referencia a: [Matplotlib](https://matplotlib.org/stable/)
 
 ---
 
@@ -33,8 +34,6 @@ conda install -c conda-forge matplotlib  ￼
 
 Matplotlib 3.9/3.10 incluye subfiguras con z-order controlable y mejoras de layout que facilitan dashboards multi-panel.  ￼
 
-⸻
-
 ## Métodos esenciales
 
 | Tipo de gráfico | Método rápido              | Insight típico                         |
@@ -46,7 +45,7 @@ Matplotlib 3.9/3.10 incluye subfiguras con z-order controlable y mejoras de layo
 | Box/Violin      | `ax.boxplot`, `ax.violinplot` | Distribución de CPA                 |
 | Heatmap         | `ax.imshow` + `plt.cm`     | Matriz canal-segmento                  |
 
-Extras valiosos: ax.twinx() (ejes gemelos), fig.autofmt_xdate() (fechas legibles), fig.savefig() (exportar PNG, PDF, SVG).
+Extras valiosos: `ax.twinx()` (ejes gemelos), `fig.autofmt_xdate()` (fechas legibles), `fig.savefig()` (exportar PNG, PDF, SVG).
 
 
 ## Ejemplo
@@ -84,21 +83,17 @@ Producción de un dashboard listo para incrustar en reportes o apps de BI. Plant
 ## Buenas prácticas de visualización
 
 - Cuenta una historia : agrega títulos, subtítulos y anotaciones; menos es más.
-- Consistencia de estilos : usa plt.style.use("seaborn-v0_8") o crea tu estilo corporativo (mpl.rcParams).
-- Espaciado automático : fig.tight_layout() o constrained_layout=True en plt.subplots.
-- Exporta en alta resolución : savefig(..., dpi=300, bbox_inches="tight").
-- Accesibilidad : revisa contraste y usa paletas color-blind friendly (e.g., mpl.colormaps["tab10"]).
+- Consistencia de estilos : usa `plt.style.use("seaborn-v0_8")` o crea tu estilo corporativo (mpl.rcParams).
+- Espaciado automático : `fig.tight_layout()` o `constrained_layout=True` en `plt.subplots`.
+- Exporta en alta resolución : `savefig(..., dpi=300, bbox_inches="tight")`.
+- Accesibilidad : revisa contraste y usa paletas color-blind friendly (e.g., `mpl.colormaps["tab10"]`).
 
 
 ## Recursos
 
 | Tipo           | Referencia                                                          |
 | -------------- | ------------------------------------------------------------------- |
-| Documentación  | Matplotlib 3.10.3 — *Getting Started* & *Users Guide*               |
-| Release notes  | *What’s new 3.9.0* — principales mejoras de layout y widgets        |
-| Cheat Sheet    | Matplotlib Cheatsheets oficiales                                    |
-| Tutorial       | “10 Data Analytics Dashboards with Matplotlib”                      |
-
+| Documentación  | Matplotlib 3.10.3 — *Quick Start guide*            |
 
 
 

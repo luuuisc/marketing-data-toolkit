@@ -3,6 +3,9 @@
 **Scikit-learn** es la librería más utilizada en Python para aprendizaje automático clásico.  
 Ofrece herramientas simples y eficientes para clasificación, regresión, clustering, reducción de dimensionalidad y validación cruzada, con una API unificada y fácil de usar.
 
+Referencia: [Scikit-learn](https://scikit-learn.org/)
+
+
 ---
 
 ## ¿Para qué sirve en marketing?

@@ -3,13 +3,16 @@
 **PyTorch** es una de las principales librerías de deep learning en Python, desarrollada por Meta AI.  
 Permite construir y entrenar modelos neuronales de forma flexible y eficiente, tanto en CPU como GPU, y es ampliamente utilizada en investigación, industria y producción.
 
+Referencia: [PyTorch](https://pytorch.org/)
+
+
 ---
 
 ## ¿Para qué sirve en marketing?
 
 * **Modelos de predicción de ventas, churn o LTV** con redes neuronales.  
 * **Procesamiento de lenguaje natural (NLP)** para análisis de sentimientos o clasificación de reseñas.  
-* **Sistemas de recomendación personalizados** para ecommerce.  
+* **Sistemas de recomendación personalizados** para e-commerce.  
 * **Visión por computadora** para detección de productos en imágenes o videos.  
 * **Fine-tuning de modelos preentrenados** para tareas específicas del negocio.
 
@@ -94,7 +97,7 @@ Modelo binario simple, útil para tareas como predicción de compra (0/1) o chur
 
 - Usa `torch.utils.data.Dataset` y `DataLoader` para datasets grandes.
 - Usa GPU si está disponible: `device = torch.device("cuda" if torch.cuda.is_available() else "cpu")`
-- Guarda y carga modelos con torch.save() y torch.load().
+- Guarda y carga modelos con `torch.save()` y `torch.load()`.
 - Monitorea métricas personalizadas (accuracy, F1, AUC) con scikit-learn.
 - Usa `torch.no_grad()` en inferencia para eficiencia y evitar guardar gradientes.
 
@@ -104,5 +107,4 @@ Modelo binario simple, útil para tareas como predicción de compra (0/1) o chur
 | ----------------- | -------------------------------------------------------------------------- |
 | Documentación     | [https://pytorch.org/docs/stable/index.html](https://pytorch.org/docs/stable/index.html) |
 | Tutoriales        | [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)           |
-| Proyecto real     | Predicción de churn en clientes de telecomunicaciones                      |
-| Modelos preentrenados | `torchvision.models`, `transformers` de Hugging Face                   |
+

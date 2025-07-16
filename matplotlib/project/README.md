@@ -52,7 +52,7 @@ project/
 1. Coloca tu archivo de datos (CSV) en la raíz del proyecto con el nombre `data.csv`.
 2. Ejecuta el script:
     ```bash
-    python campaign_analysis.py
+    python main.py
     ```
 3. Al finalizar, encontrarás el gráfico en la carpeta outputs/ con el nombre `campaign_performance.png`.
 

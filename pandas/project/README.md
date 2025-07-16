@@ -40,7 +40,7 @@ Cada una de estas métricas se clasifica en cuartiles para asignar un puntaje de
 project/
 ├── main.py            # Script principal
 ├── data/
-│   └── data.csv       # Archivo CSV con transacciones: customer_id, transaction_date, amount
+│   └── data.csv       # Archivo CSV con transacciones
 ├── outputs/
 │   ├── rfm_table.csv          # Tabla RFM resultante por cliente
 │   └── segment_summary.csv    # Resumen estadístico por segmento
@@ -71,20 +71,21 @@ project/
 
 1.	Coloca tu CSV de transacciones en data/data.csv con columnas:
 
-| Columna            | Tipo       | Descripción                              |
-| ------------------ | ---------- | ---------------------------------------- |
-| `customer_id`      | string     | Identificador único de cada cliente      |
-| `transaction_date` | YYYY-MM-DD | Fecha de la transacción                  |
-| `amount`           | float      | Monto gastado en esa transacción         |
+      | Columna            | Tipo       | Descripción                              |
+      | ------------------ | ---------- | ---------------------------------------- |
+      | `customer_id`      | string     | Identificador único de cada cliente      |
+      | `transaction_date` | YYYY-MM-DD | Fecha de la transacción                  |
+      | `amount`           | float      | Monto gastado en esa transacción         |
 
 2.	Ejecuta el script:
+
     ```bash
     python segmentation.py
     ```
 
 3.	Revisa los resultados en outputs/:
-- rfm_table.csv: cada cliente con sus valores R, F, M y RFM Score
-- segment_summary.csv: conteo, promedio de M y recencia media por segmento.
+- `rfm_table.csv`: cada cliente con sus valores R, F, M y RFM Score
+- `segment_summary.csv`: conteo, promedio de M y recencia media por segmento.
 
 ## Detalles del script
 - `load_data(path)`: carga y formatea fechas.

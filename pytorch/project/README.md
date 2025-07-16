@@ -12,7 +12,7 @@ Este proyecto utiliza **PyTorch** para construir y entrenar un clasificador de s
 
 ## Caso práctico: Monitor de sentimiento
 
-Natura lanza una nueva línea de cremas faciales y quiere saber qué opinan sus clientes en sitios de e-commerce y redes sociales. Recopilamos un dataset de reseñas etiquetadas con sentimiento (positivo, neutral, negativo) y construimos un LSTM básico en PyTorch. Tras entrenar y validar el modelo, generamos:
+Cierta empresa lanza una nueva línea de cremas faciales y quiere saber qué opinan sus clientes en sitios de e-commerce y redes sociales. Recopilamos un dataset de reseñas etiquetadas con sentimiento (positivo, neutral, negativo) y construimos un LSTM básico en PyTorch. Tras entrenar y validar el modelo, generamos:
 
 1. **Métricas de desempeño** (precisión, recall, F1) para cada clase.  
 2. **Curvas de aprendizaje** (pérdida y accuracy por época).  
@@ -33,29 +33,29 @@ Un **LSTM** (Long Short-Term Memory) se compone de dos estados principales y tre
 
 2. **Puerta de olvido**  
 
-   Decide qué parte del estado previo `Cₜ₋₁` se descarta:  
-    fₜ = σ( W_f · [hₜ₋₁, xₜ] + b_f )
+   - Decide qué parte del estado previo `Cₜ₋₁` se descarta:  
+        - fₜ = σ( W_f · [hₜ₋₁, xₜ] + b_f )
 
 3. **Puerta de entrada**  
 
-    Regula la incorporación de nueva información:  
-    iₜ = σ( W_i · [hₜ₋₁, xₜ] + b_i )
+    - Regula la incorporación de nueva información:  
+        - iₜ = σ( W_i · [hₜ₋₁, xₜ] + b_i )
 
-    Generación del candidato de celda:  
-    Ĉₜ = tanh( W_C · [hₜ₋₁, xₜ] + b_C )
+    - Generación del candidato de celda:  
+        - Ĉₜ = tanh( W_C · [hₜ₋₁, xₜ] + b_C )
 
 4. **Actualización del estado de celda**  
 
-    Combina el viejo estado y el candidato:  
-    Cₜ = fₜ ⊙ Cₜ₋₁ + iₜ ⊙ Ĉₜ
+    - Combina el viejo estado y el candidato:  
+        - Cₜ = fₜ ⊙ Cₜ₋₁ + iₜ ⊙ Ĉₜ
 
 5. **Puerta de salida**  
 
-    Controla qué parte de `Cₜ` se emite como estado oculto:  
-    oₜ = σ( W_o · [hₜ₋₁, xₜ] + b_o )
+    - Controla qué parte de `Cₜ` se emite como estado oculto:  
+        - oₜ = σ( W_o · [hₜ₋₁, xₜ] + b_o )
 
-    Estado oculto resultante:  
-    hₜ = oₜ ⊙ tanh(Cₜ)
+    - Estado oculto resultante:  
+        - hₜ = oₜ ⊙ tanh(Cₜ)
 
 - `σ` es la función sigmoide (valores entre 0 y 1).  
 - `⊙` indica multiplicación elemento a elemento.  
@@ -77,7 +77,7 @@ En el contexto de análisis de sentimiento, un LSTM puede procesar palabra a pal
 project/
 ├── main.py         # Script principal de entrenamiento
 ├── data/
-│   └── reviews.csv            # Dataset: review_text, label
+│   └── reviews.csv            # Dataset
 ├── models/
 │   └── sentiment_model.pt     # Modelo entrenado (output)
 ├── outputs/
@@ -162,34 +162,34 @@ Al completar la ejecución, el script genera los siguientes archivos:
 
 - `outputs/training_log.txt`
 
-    Contiene un registro línea por línea de cada época, con la pérdida (Loss) y la precisión (Acc):
+    - Contiene un registro línea por línea de cada época, con la pérdida (Loss) y la precisión (Acc):
 
-    Epoch 1: Loss=0.6574, Acc=0.7200
+        - Epoch 1: Loss=0.6574, Acc=0.7200
 
-    Epoch 2: Loss=0.5123, Acc=0.8100
+        - Epoch 2: Loss=0.5123, Acc=0.8100
 
-    ...
+        - Epoch 3: ...
 
 - `outputs/metrics.csv`
 
-    CSV con las métricas de evaluación (precisión, recall, F1-score) para cada clase y la matriz de confusión. Ejemplo de contenido:
+    - CSV con las métricas de evaluación (precisión, recall, F1-score) para cada clase y la matriz de confusión. Ejemplo de contenido:
 
-|         | precision | recall | f1-score | support |
-|---------|-----------|--------|----------|---------|
-| 0       | 0.85      | 0.80   | 0.82     | 60      |
-| 1       | 0.78      | 0.75   | 0.76     | 60      |
-| 2       | 0.89      | 0.92   | 0.90     | 80      |
-| accuracy|           |        | 0.82     | 200     |
+        |         | precision | recall | f1-score | support |
+        |---------|-----------|--------|----------|---------|
+        | 0       | 0.85      | 0.80   | 0.82     | 60      |
+        | 1       | 0.78      | 0.75   | 0.76     | 60      |
+        | 2       | 0.89      | 0.92   | 0.90     | 80      |
+        | accuracy|           |        | 0.82     | 200     |
 
 
 - `models/sentiment_model.pt`
 
-    Archivo binario con los pesos del modelo entrenado, listo para cargar con PyTorch y servir en producción:
+    - Archivo binario con los pesos del modelo entrenado, listo para cargar con PyTorch y servir en producción:
 
-    ```python
-    model = SentimentModel(...)
-    model.load_state_dict(torch.load("models/sentiment_model.pt"))
-    ```
+        ```python
+        model = SentimentModel(...)
+        model.load_state_dict(torch.load("models/sentiment_model.pt"))
+        ```
 
 Con estas salidas, podrás:
 1. Revisar rápidamente el comportamiento de tu entrenamiento (log).

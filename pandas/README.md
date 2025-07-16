@@ -4,7 +4,7 @@
 
 Proporciona estructuras de datos de alto rendimiento (Series y DataFrame) y una API inspirada en SQL y en las hojas de cálculo, reduciendo drásticamente el tiempo entre la ingesta de datos crudos y la obtención de *insights*. 
 
-Referencia [oai_citation:0‡pandas.pydata.org](https://pandas.pydata.org/docs/whatsnew/index.html?utm_source=chatgpt.com)
+Referencia: [Pandas](https://pandas.pydata.org/docs/index.html)
 
 ---
 
@@ -14,7 +14,7 @@ Referencia [oai_citation:0‡pandas.pydata.org](https://pandas.pydata.org/docs/w
 * **Limpiar y transformar** datos heterogéneos en tablas coherentes.  
 * **Construir tablas de hechos** y dimensiones listas para BI o modelado de ROI.  
 
-Referencia: [oai_citation:1‡medium.com](https://medium.com/data-at-the-core/pandas-for-market-analytics-dc91f32e7f05?utm_source=chatgpt.com)
+Referencia: [Assessing the impact of marketing campaigns using Pandas (Part2)](https://medium.com/data-at-the-core/pandas-for-market-analytics-dc91f32e7f05)
 
 ---
 
@@ -113,23 +113,5 @@ Genera una tabla de hechos semanal lista para modelos de atribución o dashboard
 
 | Tipo          | Referencia                                                                                 |
 | ------------- | ------------------------------------------------------------------------------------------ |
-| Libro         | *Python for Data Analysis*, 3.ª ed., Wes McKinney (2022)                                   |
 | Documentación | Pandas 2.3 — *What’s new* y notas de versión                                               |
-| Cheat Sheet   | DataCamp — “Pandas Cheat Sheet”                                                            |
-
-
-#### Fuentes consultadas  
-
-1. Pagina oficial “What’s new in 2.3.0” — Pandas.  [oai_citation:18‡pandas.pydata.org](https://pandas.pydata.org/docs/whatsnew/v2.3.0.html?utm_source=chatgpt.com)  
-2. Python for Data Analysis, 3.ª ed. — Wes McKinney.  [oai_citation:19‡wesmckinney.com](https://wesmckinney.com/book/?utm_source=chatgpt.com)  
-3. DataCamp “Pandas Cheat Sheet”.  [oai_citation:20‡datacamp.com](https://www.datacamp.com/cheat-sheet/pandas-cheat-sheet-for-data-science-in-python?utm_source=chatgpt.com)  
-4. Pandas docs “Copy-on-Write”.  [oai_citation:21‡pandas.pydata.org](https://pandas.pydata.org/docs/dev/user_guide/copy_on_write.html?utm_source=chatgpt.com)  
-5. Pandas docs “GroupBy split-apply-combine”.  [oai_citation:22‡pandas.pydata.org](https://pandas.pydata.org/docs/user_guide/groupby.html?utm_source=chatgpt.com)  
-6. `read_csv` reference — Pandas docs.  [oai_citation:23‡pandas.pydata.org](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html?utm_source=chatgpt.com)  
-7. W3Resource — Optimización de memoria con `categorical`.  [oai_citation:24‡w3resource.com](https://www.w3resource.com/python-exercises/pandas/optimize-memory-usage-with-categorical-data-type-in-pandas-dataframe.php?utm_source=chatgpt.com)  
-8. Medium — Caso de analítica de marketing con Pandas.  [oai_citation:25‡medium.com](https://medium.com/data-at-the-core/pandas-for-market-analytics-dc91f32e7f05?utm_source=chatgpt.com)  
-9. Pandas Release Notes index.  [oai_citation:26‡pandas.pydata.org](https://pandas.pydata.org/docs/whatsnew/index.html?utm_source=chatgpt.com)  
-10. Amazon listing “Python for Data Analysis”.  [oai_citation:27‡amazon.com](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X?utm_source=chatgpt.com)  
-11. DataCamp advanced cheat sheet.  [oai_citation:28‡datacamp.com](https://www.datacamp.com/cheat-sheet/pandas-cheat-sheet-data-wrangling-in-python?utm_source=chatgpt.com)  
-12. Pandas CoW (2.0 docs) for historical context.  [oai_citation:29‡pandas.pydata.org](https://pandas.pydata.org/pandas-docs/version/2.0/user_guide/copy_on_write.html?utm_source=chatgpt.com)
 
