@@ -1,7 +1,7 @@
 # Exploratory Data Analysis & Visualization con Seaborn
 
 ## Descripción  
-Este proyecto utiliza **seaborn** para realizar un análisis exploratorio de datos (EDA) y generar visualizaciones clave sobre el rendimiento de campañas de email marketing de una marca de cosméticos (por ejemplo, Natura). Con estas gráficas, el equipo de marketing podrá identificar patrones, comparar segmentos y comunicar insights de forma clara y atractiva.
+Este proyecto utiliza **seaborn** para realizar un análisis exploratorio de datos (EDA) y generar visualizaciones clave sobre el rendimiento de campañas de email marketing de una marca de cosméticos. Con estas gráficas, el equipo de marketing podrá identificar patrones, comparar segmentos y comunicar insights de forma clara y atractiva.
 
 ---
 

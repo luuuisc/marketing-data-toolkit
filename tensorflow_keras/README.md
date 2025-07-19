@@ -2,18 +2,20 @@
 
 **TensorFlow** es una plataforma de machine learning de extremo a extremo, desarrollada por Google.  
 **Keras** es su interfaz de alto nivel para construir y entrenar redes neuronales de manera rápida, modular e intuitiva.  
-Ambas juntas permiten crear modelos potentes para visión por computadora, NLP, tabulares, series de tiempo y más.
+Ambas en conjunto permiten crear modelos potentes para visión por computadora, NLP, tabulares, series de tiempo y más.
 
----
+Referencia: [TensorFlow](https://www.tensorflow.org/)
+
+Referencia: [Keras](https://keras.io/)
 
 ## ¿Para qué sirve en marketing?
 
 * **Predicción de comportamiento de usuario** (click, compra, abandono).  
-* **Clasificación de leads o segmentos con modelos neuronales tabulares.**  
-* **Análisis de sentimientos con texto de reseñas o encuestas.**  
-* **Modelos de series de tiempo para forecasting de ventas o tráfico.**  
-* **Personalización con modelos recomendadores.**  
-* **Fine-tuning de modelos preentrenados para campañas visuales o análisis de imágenes.**
+* Clasificación de leads o segmentos con **modelos neuronales tabulares.**
+* **Análisis de sentimientos** con texto de reseñas o encuestas.
+* **Modelos de series de tiempo** para forecasting de ventas o tráfico.
+* **Personalización** con modelos recomendadores.
+* **Fine-tuning** de modelos preentrenados para campañas visuales o análisis de imágenes.
 
 ---
 

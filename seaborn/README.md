@@ -80,7 +80,4 @@ Un gráfico simple con gran capacidad narrativa para explicar la eficiencia de c
 | Tipo           | Referencia                                                                       |
 | -------------- | --------------------------------------------------------------------------------- |
 | Documentación  | [https://seaborn.pydata.org](https://seaborn.pydata.org)                         |
-| Guía completa  | [https://seaborn.pydata.org/tutorial.html](https://seaborn.pydata.org/tutorial.html) |
-| Cheat Sheet    | DataCamp — “Seaborn Cheat Sheet”                                                 |
-| Tutorial       | Storytelling con Seaborn en Medium                                               |
-| Proyecto real  | Exploración de métricas publicitarias multicanal                                 |
+| Guía completa  | [https://seaborn.pydata.org/tutorial.html](https://seaborn.pydata.org/tutorial.html) |                              

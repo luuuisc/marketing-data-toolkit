@@ -86,11 +86,15 @@ pip install -r requirements.txt
 
 ## 🙌 Créditos y fuentes
 
-Gran parte del contenido está inspirado en:
-- La documentación oficial de cada librería.
-- Cursos de Coursera, DataCamp y tutoriales de Medium.
-- Proyectos y notebooks de Kaggle.
+- [Pandas](https://pandas.pydata.org/)
+- [Matplotlib](https://matplotlib.org/)
+- [Seaborn](https://seaborn.pydata.org/)
+- [Scikit-learn](https://scikit-learn.org/)
+- [PyTorch](https://pytorch.org/)
+- [TensorFlow Keras](https://www.tensorflow.org/)
 
 Si tienes sugerencias, dudas o te gustaría colaborar, ¡abre un issue o pull request!
 
-Este repositorio está hecho para crecer junto contigo en tu camino hacia un puesto en AI para Marketing
+Este repositorio está hecho para crecer junto contigo
+
+Made with ❤️ by [Luis Pérez](https://github.com/luuuisc)

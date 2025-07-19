@@ -1,4 +1,4 @@
-# Predicción de Conversión con TensorFlow Keras
+# Conversion Prediction with TensorFlow Keras
 
 ## Descripción  
 Este proyecto utiliza **TensorFlow Keras** para construir y entrenar una red neuronal profunda que predice la probabilidad de conversión de los clientes tras una campaña de email marketing de una marca de cosméticos. Al aprovechar un modelo no lineal, se capturan interacciones complejas entre variables demográficas, RFM y métricas de email como `open_rate` y `ctr`.
@@ -14,11 +14,46 @@ Se han recopilado datos históricos de campañas de email marketing con las sigu
 - **Open Rate** y **CTR** de campañas previas  
 - **Edad**, **Género** y **Región**  
 
-Vamos a entrenar un modelo de red neuronal con varias capas densas y funciones de activación ReLU, que al final emite una probabilidad de conversión (sigmoide). El área de marketing podrá:
+Vamos a entrenar un modelo de red neuronal con varias capas densas y funciones de activación **ReLU**, que al final emite una probabilidad de conversión (sigmoide). El área de marketing podrá:
 
 - Priorizar envíos a clientes con mayor probabilidad de conversión.  
 - Ajustar contenido y segmentación según la salida del modelo.  
 - Incrementar el ROI al focalizar recursos en perfiles de alto potencial.
+
+## ¿Qué es ReLU y por qué es importante?
+
+La **ReLU** (Rectified Linear Unit, o Unidad Lineal Rectificada) es una función de activación definida como:
+
+$$
+\mathrm{ReLU}(x) = \max(0, x)
+$$
+
+Es decir, cualquier valor de entrada menor o igual a 0 se mapea a 0, y los valores positivos se mantienen sin cambios.
+
+**Importancia de ReLU**  
+- **No linealidad eficiente**: Introduce la no linealidad necesaria para que la red neuronal pueda aprender relaciones complejas, pero a la vez se calcula muy rápidamente (solo una comparación con cero).  
+- **Mitigación del _vanishing gradient_**: A diferencia de funciones como la sigmoide o la tangente hiperbólica, ReLU preserva el gradiente para entradas positivas, evitando que el gradiente se haga demasiado pequeño y permitiendo un entrenamiento más profundo.  
+- **Sparsity en las activaciones**: Al anular todas las entradas negativas, muchas neuronas quedan “inactivas” (salida cero), lo que conduce a representaciones más dispersas y puede mejorar la capacidad de generalización del modelo.  
+- **Convergencia más rápida**: En la práctica, las redes profundas con ReLU suelen entrenar más rápido y alcanzar mejores rendimientos en tareas de visión por computadora, procesamiento de lenguaje natural y otras aplicaciones de aprendizaje profundo.
+
+> **Tip:** Para paliar el problema de las “neuronas muertas” (entradas siempre negativas que nunca activan), existen variantes como **Leaky ReLU**, **PReLU** o **ELU**, que permiten un pequeño gradiente cuando \(x<0\).  
+
+- **Ventajas**  
+  - Cálculo muy eficiente: basta con comparar con cero.  
+  - Mitiga el problema del _vanishing gradient_ para valores positivos.  
+  - Genera activaciones dispersas (muchos ceros), lo que puede mejorar la generalización.
+
+- **Desventajas**  
+  - Puede provocar “neuronas muertas” (_dying ReLU_): si la entrada es siempre negativa, el gradiente será cero y la neurona dejará de aprender.  
+  - No está centrada en cero, lo que a veces ralentiza la convergencia.
+
+**Ejemplo en Python (NumPy):**
+```python
+import numpy as np
+
+def relu(x):
+    return np.maximum(0, x)
+```
 
 ---
 
@@ -30,10 +65,10 @@ project/
 ├── data/
 │   └── campaign_history.csv     # Dataset de entrada
 ├── models/
-│   └── keras_campaign_model.h5  # Modelo entrenado (output)
+│   └── keras_campaign_model.keras  # Modelo entrenado (output)
 ├── outputs/
 │   ├── metrics_keras.csv        # Métricas de evaluación (classification report, ROC AUC)
-│   └── training_history.png     # Curvas de pérdida y accuracy por época
+├── train_keras_model.ipb        # Script de entrenamiento con Keras
 └── README.md                    # Este documento
 ```
 
@@ -70,11 +105,16 @@ mkdir -p models outputs
 
 4. Ejecuta el entrenamiento:
 
+Hay dos formas de ejecutarlo, a través del script `main.py` o directamente desde el notebook.
+
+- **Nota:** Si se ejecuta el script main.py, se deben crear las carpetas de salida antes de ejecutarlo.
+
+
 ```bash
 python train_keras_model.py \
   --data_path data/campaign_history.csv \
   --test_size 0.2 \
-  --model_out models/keras_campaign_model.h5 \
+  --model_out models/keras_campaign_model.keras \
   --metrics_out outputs/metrics_keras.csv \
   --history_out outputs/training_history.png \
   --epochs 20 \
@@ -86,7 +126,7 @@ python train_keras_model.py \
 
 - --data_path: Ruta al CSV de datos.
 - --test_size: Proporción del conjunto de prueba (default=0.2).
-- --model_out: Archivo HDF5 para guardar el modelo.
+- --model_out: Archivo .keras para guardar el modelo.
 - --metrics_out: CSV con classification report y ROC AUC.
 - --history_out: PNG con curvas de pérdida y accuracy.
 - --epochs, --batch_size, --lr: Hiperparámetros del entrenamiento.
@@ -122,7 +162,7 @@ python train_keras_model.py \
 
 ## Archivos de salida
 
-Al ejecutar `train_keras_model.py` (o el notebook equivalente), se generan estos tres artefactos clave:
+Al ejecutar `main.py` (o el notebook equivalente), se generan estos tres artefactos clave:
 
 - **`models/keras_campaign_model.keras`**  
   - Modelo entrenado guardado en el formato nativo de Keras.  
@@ -164,7 +204,7 @@ Implementar una solución de Deep Learning con TensorFlow Keras para predecir co
 5. **Ventaja competitiva basada en datos**  
    Automatizar predicciones con Deep Learning sitúa a la empresa a la vanguardia de la analítica avanzada, transformando datos históricos en decisiones proactivas.
 
-Con este proyecto, Natura (o cualquier marca de cosméticos) pasará de un enfoque reactivo a uno predictivo, alineando esfuerzos de marketing con las necesidades y comportamientos reales de sus clientes.  
+Con este proyecto,cualquier marca pasará de un enfoque reactivo a uno predictivo, alineando esfuerzos de marketing con las necesidades y comportamientos reales de sus clientes.  
 
 ## Extensiones posibles
 - Experimentar con arquitecturas más profundas o regularización avanzada.

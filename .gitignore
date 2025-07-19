@@ -39,7 +39,6 @@ runs/
 *.tflite
 
 # === Datos y modelos grandes ===
-*.csv
 *.tsv
 *.xls
 *.xlsx

@@ -94,5 +94,3 @@ Caso de clasificación binaria útil para campañas de email marketing, predicci
 | -------------- | ---------------------------------------------------------------------------------- |
 | Documentación  | [https://scikit-learn.org/stable/](https://scikit-learn.org/stable/)              |
 | Tutoriales     | [https://scikit-learn.org/stable/tutorial/](https://scikit-learn.org/stable/tutorial/) |
-| Proyecto real  | Predicción de churn con Random Forest                                              |
-| Cheat Sheet    | Scikit-learn Cheat Sheet — DataCamp                                                |
