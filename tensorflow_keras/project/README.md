@@ -68,7 +68,7 @@ project/
 │   └── keras_campaign_model.keras  # Modelo entrenado (output)
 ├── outputs/
 │   ├── metrics_keras.csv        # Métricas de evaluación (classification report, ROC AUC)
-├── train_keras_model.ipb        # Script de entrenamiento con Keras
+├── train_keras_model.ipynb        # Script de entrenamiento con Keras
 └── README.md                    # Este documento
 ```
 
@@ -179,6 +179,20 @@ Al ejecutar `main.py` (o el notebook equivalente), se generan estos tres artefac
 - **`outputs/training_history.png`**  
   - Gráfica de la evolución de la pérdida (`loss`) y la precisión (`accuracy`) en entrenamiento y validación por época.  
   - Facilita detectar sobreajuste o underfitting y tomar decisiones sobre hiperparámetros.
+
+### Curva ROC:
+La curva ROC (Característica Operativa del Receptor) es una gráfica que muestra la relación entre la tasa de verdaderos positivos (TPR) y la tasa de falsos positivos (FPR) para diferentes umbrales de clasificación. 
+
+### AUC:
+El área bajo la curva ROC (AUC) es una medida de la capacidad del modelo para distinguir entre las clases positiva y negativa. Un AUC más alto indica un mejor rendimiento. 
+
+Interpretación:
+
+  - AUC = 1: El modelo es perfecto y puede clasificar todas las instancias correctamente. 
+  - 0.7 < AUC < 0.9: El modelo tiene un buen rendimiento y es útil en la práctica. 
+  - 0.5 < AUC < 0.7: El modelo tiene un rendimiento moderado y puede ser mejorado. 
+  - AUC = 0.5: El modelo es equivalente al azar y no es útil. 
+  - AUC < 0.5: El modelo tiene un rendimiento peor que el azar y podría estar mal configurado. 
 
 ---
 

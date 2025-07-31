@@ -80,7 +80,7 @@ project/
 2.	Ejecuta el script:
 
     ```bash
-    python segmentation.py
+    python main.py
     ```
 
 3.	Revisa los resultados en outputs/:

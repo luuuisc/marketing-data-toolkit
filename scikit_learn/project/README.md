@@ -2,15 +2,15 @@
 
 ## Descripción
 
-Este proyecto utiliza **scikit-learn** para entrenar y evaluar un modelo de clasificación que predice la probabilidad de conversión de los clientes tras una campaña de email marketing. Basado en datos históricos de una marca de cosméticos como Natura, el objetivo es:
+Este proyecto utiliza **scikit-learn** para entrenar y evaluar un modelo de clasificación que predice la probabilidad de conversión de los clientes tras una campaña de email marketing. Basado en datos históricos de una marca de cosméticos, el objetivo es:
 
 - Identificar clientes con alta probabilidad de compra.  
 - Optimizar segmentación y personalización de campañas.  
 - Mejorar el ROI al enfocar recursos en los perfiles más receptivos.
 
-## Caso práctico: Predicción de conversiones en Natura
+## Caso práctico: Predicción de conversiones
 
-Natura lanzó varias campañas de email para su línea de maquillaje. Se recopilaron datos por cliente:
+Una empresa de cosméticos lanzó varias campañas de email para su línea de maquillaje. Se recopilaron datos por cliente:
 
 - **Recencia**: días desde la última compra.  
 - **Frecuencia**: número de compras en el último año.  
@@ -28,7 +28,7 @@ Con este dataset, entrenamos un **Logistic Regression** que predice la probabili
 
 ```
 projects/
-├── train_model.py             # Script de entrenamiento y evaluación
+├── main.py             # Script de entrenamiento y evaluación
 ├── data/
 │   └── campaign_history.csv   # Dataset con features y label
 ├── models/
@@ -61,7 +61,7 @@ pip install pandas numpy scikit-learn joblib
 ## Uso
 
 ```bash
-python train_model.py \
+python main.py \
   --data_path data/campaign_history.csv \
   --test_size 0.2 \
   --model_out models/campaign_model.pkl \

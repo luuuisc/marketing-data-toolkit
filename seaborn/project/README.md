@@ -55,7 +55,7 @@ mkdir -p outputs
 3. Ejecuta el script:
 
 ```bash
-python seaborn_visualization.py \
+python main.py \
   --data_path data/campaign_history.csv \
   --out_dir outputs
 ```
